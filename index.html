@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            cursor: pointer;
+        }
+        .whatsapp-float i {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<h1>Demo: WhatsApp Support Chat</h1>
+<p>Click the button to chat with us on WhatsApp.</p>
+
+<!-- Floating WhatsApp button -->
+<a
+        href="https://wa.me/1234567890?text=Hello%20Support%20Team%2C%20I%20need%20help!"
+        class="whatsapp-float"
+        target="_blank">
+    <i>💬</i>
+</a>
+</body>
+</html>
