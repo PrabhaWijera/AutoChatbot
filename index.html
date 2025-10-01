@@ -3,40 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Chat Demo</title>
+    <title>WhatsApp Support Demo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        h1 {
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
             text-align: center;
-            margin-top: 50px;
+            font-size: 30px;
+            box-shadow: 2px 2px 5px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
         }
-        p {
-            text-align: center;
-            font-size: 18px;
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20b958;
+        }
+
+        .whatsapp-icon {
+            width: 35px;
+            height: 35px;
         }
     </style>
 </head>
 <body>
-<h1>Demo: WhatsApp Support Chat</h1>
-<p>Click the floating WhatsApp button to start chatting!</p>
 
-<!-- GetButton.io Floating WhatsApp Widget -->
-<script defer src="https://static.getbutton.io/widget/bundle.js?id=JZoYA"></script>
-<script defer>
-    window.onload = function() {
-        if (typeof WhWidgetSendButton !== "undefined") {
-            WhWidgetSendButton.init({
-                whatsapp: "+1234567890", // Replace with your number
-                call_to_action: "Message us", // Button text
-                position: "right", // 'right' or 'left'
-                pre_filled_message: "Hello! I need support.", // Optional
-            });
-        }
-    };
-</script>
+<h2 style="text-align:center; margin-top:50px;">WhatsApp Support Demo</h2>
+<p style="text-align:center;">Click the floating WhatsApp button to start chatting with support.</p>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/+94760368019?text=Hello%20Support%2C%20I%20need%20help%20with%20your%20services."
+   class="whatsapp-float"
+   target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="whatsapp-icon" alt="WhatsApp">
+</a>
+
 </body>
 </html>
