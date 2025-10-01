@@ -29,6 +29,9 @@
             align-items: center;
             justify-content: center;
             transition: transform 0.2s;
+
+            /* Floating animation */
+            animation: floatButton 3s ease-in-out infinite;
         }
 
         .whatsapp-float:hover {
@@ -39,6 +42,13 @@
         .whatsapp-icon {
             width: 35px;
             height: 35px;
+        }
+
+        /* Keyframes for floating effect */
+        @keyframes floatButton {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
         }
     </style>
 </head>
